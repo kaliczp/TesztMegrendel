@@ -36,5 +36,8 @@ let createTD = (html, parent) => {
 for(let k in users) {
     let tr = document.createElement("tr");
     createTD(parseInt(k)+1, tr);
+    for(let value of Object.values(users[k])) {
+        createTD(value, tr);
+    }
     tableBody.appendChild(tr);
 }
