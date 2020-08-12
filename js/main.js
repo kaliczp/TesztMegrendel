@@ -20,3 +20,10 @@ function showSumPrice(price = 1000, amountNumber = 1) {
         showAmount.innerHTML = amount;
     }
 }
+
+let alertCloseButtons = document.querySelectorAll(".close[data-dismiss='alert']");
+for (let i = 0; i < alertCloseButtons.length; i++) {
+    alertCloseButtons[i].addEventListener("click", function(ev){
+        console.log( ev )
+    })
+}
