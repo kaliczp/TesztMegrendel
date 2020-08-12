@@ -22,8 +22,9 @@ function showSumPrice(price = 1000, amountNumber = 1) {
 }
 
 let alertCloseButtons = document.querySelectorAll(".close[data-dismiss='alert']");
+let alertCloseEventHandlerFunction = function(ev){
+    this.parentElement.style.display = "none";
+};
 for (let i = 0; i < alertCloseButtons.length; i++) {
-    alertCloseButtons[i].addEventListener("click", function(ev){
-        console.log( ev )
-    })
+    alertCloseButtons[i].addEventListener("click", alertCloseEventHandlerFunction);
 }
